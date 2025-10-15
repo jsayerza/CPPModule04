@@ -26,15 +26,15 @@ public:
 	Animal();
 	Animal(std::string type );
 	Animal(const Animal &origin);
-	~Animal();
+	virtual ~Animal();
 
 	Animal& operator=(const Animal& origin);
 
 	//Getters
 	std::string	getType() const;
 
-	//Setters
-	void		setType(std::string const& type);
+	virtual void makeSound() const;
+
 };
 
 #endif

@@ -12,19 +12,14 @@
 
 #include "Animal.hpp"
 
-Animal::Animal(void) : _type("default")
+Animal::Animal(void) : _type("Animal")
 {
 	std::cout << "Animal default created." << std::endl;
 }
 
-Animal::Animal( std::string type ) : _type(type)
+Animal::Animal(const Animal &origin) : _type(origin._type)
 {
-	std::cout << "Animal " << this->_type << " created." << std::endl;
-}
-
-Animal::Animal(const Animal &origin)
-{
-    *this = origin;
+    // *this = origin;
     std::cout << "Animal copy constructor called" << std::endl;
 }
 
@@ -40,7 +35,7 @@ Animal& Animal::operator=(const Animal& origin)
     {
         this->_type = origin._type;
     }
-    return *this;
+    return (*this);
 }
 
 
@@ -50,10 +45,10 @@ std::string Animal::getType() const
 	return(this->_type);
 }
 
-//Setters & Action points functions
-void	Animal::setType(std::string const& type)
-{
-	this->_type = type;
-	std::cout << "Animal's type is: " << type << std::endl;
 
+//Functions
+void Animal::makeSound() const
+{
+    std::cout << "Undefined animal sound." << std::endl;
 }
+

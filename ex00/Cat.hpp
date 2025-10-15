@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsayerza <jsayerza@student.42barcelona.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 14:00:00 by jsayerza          #+#    #+#             */
-/*   Updated: 2025/10/12 14:00:00 by jsayerza         ###   ########.fr       */
+/*   Created: 2025/10/15 17:00:00 by jsayerza          #+#    #+#             */
+/*   Updated: 2025/10/15 17:00:00 by jsayerza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include "ScavTrap.hpp"
-# include "FragTrap.hpp"
+# include "Animal.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap
+class Cat : public Animal
 {
 private:
-	std::string _name;
+	std::string	_sound;
+
 public:
-	DiamondTrap();
-	DiamondTrap(std::string name);
-	DiamondTrap(const DiamondTrap& origin);
-	~DiamondTrap();
+	Cat();
+	Cat(const Cat& other);
+	~Cat();
 
-	DiamondTrap& operator=(const DiamondTrap& origin);
+	Cat& operator=(const Cat& origin);
 
-	void attack(const std::string& target);
-	void whoAmI();
+	void makeSound() const;
 };
 
 #endif
