@@ -18,9 +18,8 @@ Cat::Cat(void)
 	std::cout << "Cat default created." << std::endl;
 }
 
-Cat::Cat(const Cat &other) : Animal(other)
+Cat::Cat(const Cat &origin) : Animal(origin)
 {
-    // *this = other;
     std::cout << "Cat copy constructor called" << std::endl;
 }
 
@@ -32,7 +31,7 @@ Cat::~Cat( void )
 Cat& Cat::operator=(const Cat &origin)
 {
     if (this != &origin)
-        Cat::operator=(origin);
+        Animal::operator=(origin);
     std::cout << "Cat copy assignment operator called" << std::endl;
     return (*this);
 }

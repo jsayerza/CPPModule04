@@ -19,7 +19,6 @@ Animal::Animal(void) : _type("Animal")
 
 Animal::Animal(const Animal &origin) : _type(origin._type)
 {
-    // *this = origin;
     std::cout << "Animal copy constructor called" << std::endl;
 }
 

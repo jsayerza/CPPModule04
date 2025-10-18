@@ -22,7 +22,7 @@ private:
 
 public:
 	Cat();
-	Cat(const Cat& other);
+	Cat(const Cat& origin);
 	~Cat();
 
 	Cat& operator=(const Cat& origin);

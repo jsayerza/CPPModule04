@@ -18,9 +18,8 @@ Dog::Dog(void)
 	std::cout << "Dog default created." << std::endl;
 }
 
-Dog::Dog(const Dog &other) : Animal(other)
+Dog::Dog(const Dog &origin) : Animal(origin)
 {
-    // *this = other;
     std::cout << "Dog copy constructor called" << std::endl;
 }
 
@@ -32,7 +31,7 @@ Dog::~Dog( void )
 Dog& Dog::operator=(const Dog &origin)
 {
     if (this != &origin)
-        Dog::operator=(origin);
+        Animal::operator=(origin);
     std::cout << "Dog copy assignment operator called" << std::endl;
     return (*this);
 }

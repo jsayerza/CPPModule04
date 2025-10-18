@@ -13,6 +13,8 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main( void )
 {
@@ -37,8 +39,24 @@ int main( void )
 
 	delete dog;
 	delete cat;
-	delete cat2;
 	delete animal;
+
+
+	std::cout << std::endl;
+	const WrongAnimal* wrongAnimal = new WrongAnimal();
+	const WrongAnimal* wrongCat = new WrongCat();
+
+	std::cout << "animal type: " << wrongAnimal->getType() << " " << std::endl;
+	std::cout << "cat type: " << wrongCat->getType() << " " << std::endl;
+
+	std::cout << "animal sound: ";
+	wrongAnimal->makeSound();
+	std::cout << "cat sound: ";
+	wrongCat->makeSound();
+
+	delete wrongCat;
+	delete wrongAnimal;
+
 
 	return (0);
 }
