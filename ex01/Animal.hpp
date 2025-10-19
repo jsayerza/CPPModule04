@@ -36,9 +36,6 @@ public:
 	std::string	getType() const;
 
 	virtual void makeSound() const;
-	virtual void setIdea(std::string idea) const;
-	virtual void getIdeas() const;
-
 };
 
 #endif

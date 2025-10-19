@@ -54,29 +54,3 @@ void Animal::makeSound() const
 {
     std::cout << "Undefined animal sound." << std::endl;
 }
-
-void Animal::setIdea(std::string idea) const
-{
-	for (size_t i = 0; i < 100; i++)
-	{
-		if (_brain->_ideas[i] == "\0")
-		{
-			_brain->_ideas[i] = idea;
-			// std::cout << "  idea[" << i << "]: '" << idea << "' -> " << _brain->_ideas[i] << "<-" << std::endl;
-			return;
-		}	
-	}
-}
-
-void Animal::getIdeas() const
-{
-	for (size_t i = 0; i < 100; i++)
-	{
-		if (_brain->_ideas[i] == "\0")
-		{
-			return;
-		}	
-		std::cout << "  ideaAnimal[" << i << "]: " << _brain->_ideas[i] << std::endl;
-	}
-	std::cout << std::endl;
-}

@@ -41,33 +41,12 @@ Cat& Cat::operator=(const Cat &origin)
     return (*this);
 }
 
+Brain* Cat::getBrain() const
+{
+	return(this->_brain);
+}
+
 void Cat::makeSound() const
 {
     std::cout << "meow" << std::endl;
-}
-
-void Cat::setIdea(std::string idea) const
-{
-	for (size_t i = 0; i < 100; i++)
-	{
-		if (_brain->_ideas[i] == "\0")
-		{
-			_brain->_ideas[i] = idea;
-			// std::cout << "  idea[" << i << "]: '" << idea << "' -> " << _brain->_ideas[i] << "<-" << std::endl;
-			return;
-		}	
-	}
-}
-
-void Cat::getIdeas() const
-{
-	for (size_t i = 0; i < 100; i++)
-	{
-		if (_brain->_ideas[i] == "\0")
-		{
-			return;
-		}	
-		std::cout << "  ideaCat[" << i << "]: " << _brain->_ideas[i] << std::endl;
-	}
-	std::cout << std::endl;
 }

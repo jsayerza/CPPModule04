@@ -14,7 +14,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
-#include "Brain.hpp"
+# include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -29,10 +29,9 @@ public:
 
 	Cat& operator=(const Cat& origin);
 
-	void makeSound() const;
-	void setIdea(std::string idea) const;
-	void getIdeas() const;
+	Brain* getBrain() const;
 
+	void makeSound() const;
 };
 
 #endif

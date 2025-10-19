@@ -20,8 +20,6 @@ Brain::Brain(void)
 		this->_ideas[i] = "\0";
 	}
 	std::cout << "Brain constructor called" << std::endl;
-
-	this->_ideas[0] = "Idea0";
 }
 
 Brain::Brain(const Brain &origin)
@@ -43,4 +41,38 @@ Brain& Brain::operator=(const Brain& origin)
 			this->_ideas[i] = origin._ideas[i];
 		}
 	return (*this);
+}
+
+void Brain::addIdea(std::string idea)
+{
+	for (size_t i = 0; i < 100; i++)
+	{
+		if (this->_ideas[i] == "\0")
+		{
+			this->_ideas[i] = idea;
+			return;
+		}	
+	}
+}
+
+void Brain::setIdea(int index, std::string idea)
+{
+	if (index >= 0 && index < 100)
+	{
+		this->_ideas[index] = idea;
+		return;
+	}	
+}
+
+void Brain::getIdeas() const
+{
+	for (size_t i = 0; i < 100; i++)
+	{
+		if (_ideas[i] == "\0")
+		{
+			return;
+		}	
+		std::cout << "  idea[" << i << "]: " << _ideas[i] << std::endl;
+	}
+	std::cout << std::endl;
 }

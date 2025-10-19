@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Tests.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsayerza <jsayerza@student.42barcelona.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 13:00:00 by jsayerza          #+#    #+#             */
-/*   Updated: 2025/10/18 13:00:00 by jsayerza         ###   ########.fr       */
+/*   Created: 2025/10/19 21:00:00 by jsayerza          #+#    #+#             */
+/*   Updated: 2025/10/19 21:00:00 by jsayerza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef TESTS_HPP
+# define TESTS_HPP
 
-# include <string>
-
-class Brain
-{
-private:
-	std::string _ideas[100];
-
-public:
-	Brain();
-	Brain(const Brain& origin);
-	~Brain();
-
-	Brain& operator=(const Brain& origin);
-
-	// std::string _ideas[100];
-	void addIdea(std::string idea);
-	void setIdea(int index, std::string idea);
-	void getIdeas() const;
-};
+void testDeepCopy(void);
+void testAssignmentOperator();
+void testDoubleDelete();
 
 #endif
