@@ -1,4 +1,4 @@
-NAME = polymorphism
+NAME = brain
 
 CXX = c++
 # CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
@@ -9,7 +9,8 @@ SRCS =		main.cpp \
 			Dog.cpp \
 			Cat.cpp \
 			WrongAnimal.cpp \
-			WrongCat.cpp
+			WrongCat.cpp \
+			Brain.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -17,7 +18,8 @@ HEADERS =	Animal.hpp \
 			Dog.hpp \
 			Cat.hpp \
 			WrongAnimal.hpp \
-			WrongCat.hpp
+			WrongCat.hpp \
+			Brain.hpp
 
 all: $(NAME)
 
