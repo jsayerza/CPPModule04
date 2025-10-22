@@ -44,7 +44,7 @@ int main( void )
 
 	int num_objects = 4;
 	std::cout << "Let's create and fill an array of " << num_objects << " Animal objects." << std::endl;
-	const Animal* animal_array[num_objects];
+	const AAnimal* animal_array[num_objects];
 	std::cout << num_objects/2 << " of it will be Dog objects." << std::endl;
 	for (int i=0; i<(num_objects/2); i++)
 	{

@@ -12,14 +12,14 @@
 
 #include "Cat.hpp"
 
-Cat::Cat(void) : Animal()
+Cat::Cat(void) : AAnimal()
 {
     this->_type = "Cat";
 	this->_brain = new Brain();
     std::cout << "Cat default created." << std::endl;
 }
 
-Cat::Cat(const Cat &origin) : Animal(origin)
+Cat::Cat(const Cat &origin) : AAnimal(origin)
 {
 	this->_brain = new Brain(*origin._brain);
     std::cout << "Cat copy constructor called" << std::endl;
@@ -35,7 +35,7 @@ Cat& Cat::operator=(const Cat &origin)
 {
     if (this != &origin)
 	{
-        Animal::operator=(origin);
+        AAnimal::operator=(origin);
 		delete this->_brain;
 		this->_brain = new Brain(*origin._brain);
     }

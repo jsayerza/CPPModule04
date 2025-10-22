@@ -12,35 +12,35 @@
 
 #include "Animal.hpp"
 
-Animal::Animal(void)
+AAnimal::AAnimal(void)
 {
-	std::cout << "Animal default created." << std::endl;
+	std::cout << "AAnimal default created." << std::endl;
 }
 
-Animal::Animal(const Animal &origin) : _type(origin._type)
+AAnimal::AAnimal(const AAnimal &origin) : _type(origin._type)
 {
-    std::cout << "Animal copy constructor called" << std::endl;
+    std::cout << "AAnimal copy constructor called" << std::endl;
 }
 
-Animal::~Animal(void)
+AAnimal::~AAnimal(void)
 {
-	std::cout << "Animal " << _type << " destructed." << std::endl;
+	std::cout << "AAnimal " << _type << " destructed." << std::endl;
 }
 
-Animal& Animal::operator=(const Animal& origin)
+AAnimal& AAnimal::operator=(const AAnimal& origin)
 {
-    std::cout << "Animal copy assignment operator called" << std::endl;
+    std::cout << "AAnimal copy assignment operator called" << std::endl;
     if (this != &origin)
         this->_type = origin._type;
     return (*this);
 }
 
-std::string Animal::getType() const
+std::string AAnimal::getType() const
 {
 	return(this->_type);
 }
 
-void Animal::makeSound() const
+void AAnimal::makeSound() const
 {
     std::cout << "Undefined animal sound." << std::endl;
 }
