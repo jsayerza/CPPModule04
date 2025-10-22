@@ -15,26 +15,20 @@
 
 # include <string>
 # include <iostream>
-# include <iomanip>
-#include "Brain.hpp"
 
 class Animal
 {
 protected:
 	std::string _type;
-	Brain* _brain;
 
 public:
 	Animal();
-	Animal(std::string type );
 	Animal(const Animal &origin);
 	virtual ~Animal();
 
 	Animal& operator=(const Animal& origin);
 
-	//Getters
 	std::string	getType() const;
-
 	virtual void makeSound() const;
 };
 

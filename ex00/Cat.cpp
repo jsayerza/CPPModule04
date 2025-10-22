@@ -38,5 +38,5 @@ Cat& Cat::operator=(const Cat &origin)
 
 void Cat::makeSound() const
 {
-    std::cout << "meow" << std::endl;
+    std::cout << "Miau!" << std::endl;
 }

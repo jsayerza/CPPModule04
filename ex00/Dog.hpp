@@ -17,9 +17,6 @@
 
 class Dog : public Animal
 {
-private:
-	std::string	_sound;
-
 public:
 	Dog();
 	Dog(const Dog& origin);

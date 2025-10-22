@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Tests.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsayerza <jsayerza@student.42barcelona.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 17:00:00 by jsayerza          #+#    #+#             */
-/*   Updated: 2025/10/15 17:00:00 by jsayerza         ###   ########.fr       */
+/*   Created: 2025/10/19 21:00:00 by jsayerza          #+#    #+#             */
+/*   Updated: 2025/10/19 21:00:00 by jsayerza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef TESTS_HPP
+# define TESTS_HPP
 
-# include "Animal.hpp"
-
-class Cat : public Animal
-{
-public:
-	Cat();
-	Cat(const Cat& origin);
-	~Cat();
-
-	Cat& operator=(const Cat& origin);
-
-	void makeSound() const;
-};
+void testDeepCopy(void);
+void testAssignmentOperator();
+void testDoubleDelete();
 
 #endif

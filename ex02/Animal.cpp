@@ -12,7 +12,7 @@
 
 #include "Animal.hpp"
 
-Animal::Animal(void) : _type("Animal")
+Animal::Animal(void)
 {
 	std::cout << "Animal default created." << std::endl;
 }
@@ -22,7 +22,7 @@ Animal::Animal(const Animal &origin) : _type(origin._type)
     std::cout << "Animal copy constructor called" << std::endl;
 }
 
-Animal::~Animal( void )
+Animal::~Animal(void)
 {
 	std::cout << "Animal " << _type << " destructed." << std::endl;
 }

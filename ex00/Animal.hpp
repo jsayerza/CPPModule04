@@ -15,7 +15,6 @@
 
 # include <string>
 # include <iostream>
-# include <iomanip>
 
 class Animal
 {
@@ -24,7 +23,6 @@ protected:
 
 public:
 	Animal();
-	Animal(std::string type );
 	Animal(const Animal &origin);
 	virtual ~Animal();
 
@@ -34,7 +32,6 @@ public:
 	std::string	getType() const;
 
 	virtual void makeSound() const;
-
 };
 
 #endif

@@ -6,6 +6,7 @@
 *.json
 polymorphism
 brain
+abstract
 
 # Prerequisites
 *.d

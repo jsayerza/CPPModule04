@@ -38,5 +38,5 @@ Dog& Dog::operator=(const Dog &origin)
 
 void Dog::makeSound() const
 {
-    std::cout << "bark" << std::endl;
+    std::cout << "Guau!" << std::endl;
 }
