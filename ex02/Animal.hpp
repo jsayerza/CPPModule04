@@ -23,13 +23,13 @@ protected:
 
 public:
 	AAnimal();
-	AAnimal(const AAnimal &origin);
+	AAnimal(const AAnimal& origin);
 	virtual ~AAnimal();
 
 	AAnimal& operator=(const AAnimal& origin);
 
 	std::string	getType() const;
-	virtual void makeSound() const = 0;	//<-- classe abstacta
+	virtual void makeSound() const = 0;	//<-- classe abstracta
 };
 
 #endif

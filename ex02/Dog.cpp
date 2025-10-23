@@ -35,9 +35,8 @@ Dog& Dog::operator=(const Dog &origin)
 {
     if (this != &origin)
 	{
-        AAnimal::operator=(origin);
-		delete this->_brain;
-		this->_brain = new Brain(*origin._brain);
+		this->_type = origin._type;
+		*this->_brain = *origin._brain;
     }
     std::cout << "Dog copy assignment operator called" << std::endl;
     return (*this);

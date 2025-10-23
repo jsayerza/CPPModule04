@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <string>
-# include <iostream>
-# include <iomanip>
 # include "Dog.hpp"
 
 void testDeepCopy()

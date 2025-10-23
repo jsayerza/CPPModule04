@@ -14,6 +14,8 @@
 # define BRAIN_HPP
 
 # include <string>
+# include <iostream>
+# include <string>
 
 class Brain
 {

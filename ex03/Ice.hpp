@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsayerza <jsayerza@student.42barcelona.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 12:00:00 by jsayerza          #+#    #+#             */
-/*   Updated: 2025/10/18 12:00:00 by jsayerza         ###   ########.fr       */
+/*   Created: 2025/10/22 19:00:00 by jsayerza          #+#    #+#             */
+/*   Updated: 2025/10/22 19:00:00 by jsayerza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
 # include <iostream>
-# include "WrongAnimal.hpp"
+# include "AMateria.hpp"
 
-class WrongCat : public WrongAnimal
+class Ice : public AMateria
 {
-public:
-	WrongCat();
-	WrongCat(const WrongCat& origin);
-	~WrongCat();
+	private:
+	public:
+		Ice();
+		Ice(const Ice& other);
+		~Ice();
 
-	WrongCat& operator=(const WrongCat& origin);
+		Ice& operator=(const Ice& other);
 
-	void makeSound() const;
+		Ice* clone() const;
+
+		void use(ICharacter& target);
 };
 
 #endif
